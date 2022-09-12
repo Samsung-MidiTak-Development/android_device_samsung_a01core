@@ -85,5 +85,8 @@ TARGET_COPY_OUT_ODM := odm
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # Inherit the proprietary files
 include vendor/samsung/a01core/BoardConfigVendor.mk
