@@ -1,16 +1,16 @@
 # MTK platform .rc configure
 
-import ${ro.vendor.rc}init.connectivity.rc
-import ${ro.vendor.rc}init.project.rc
+import /vendor/etc/init/hw/init.connectivity.rc
+import /vendor/etc/init/hw/init.project.rc
 import /FWUpgradeInit.rc
 import /vendor/etc/init/hw/init.aee.rc
 import /system/etc/init/hw/init.aee.rc
-import ${ro.vendor.rc}init.mt6739.usb.rc
-import ${ro.vendor.rc}init.ago.rc
+import /vendor/etc/init/hw/init.mt6739.usb.rc
+import /vendor/etc/init/hw/init.ago.rc
 
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
-import ${ro.vendor.rc}init.modem.rc
+import /vendor/etc/init/hw/init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system
