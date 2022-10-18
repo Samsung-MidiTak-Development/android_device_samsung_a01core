@@ -406,7 +406,7 @@ on post-fs-data
     chown system system /dev/mtk_cmdq
 
     #OFFLOAD SERVICE
-    chmod 0640 /dev/offloadservice
+    chmod 0644 /dev/offloadservice
     chown media media /dev/offloadservice
 
     #OPEN DSP
