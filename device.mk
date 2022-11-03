@@ -82,7 +82,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespace
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    hardware/samsung
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a01core/a01core-vendor.mk)
