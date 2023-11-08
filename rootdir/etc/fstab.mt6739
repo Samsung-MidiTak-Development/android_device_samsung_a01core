@@ -12,6 +12,7 @@ vendor /vendor ext4 ro wait,logical,first_stage_mount
 product /product ext4 ro wait,logical,first_stage_mount
 odm /odm ext4 ro wait,logical,first_stage_mount
 
+/dev/block/platform/bootdevice/by-name/md_udc	/metadata	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,formattable,first_stage_mount,check
 /dev/block/platform/bootdevice/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
 /dev/block/platform/bootdevice/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678 wait,check,encryptable=footer,quota
 
