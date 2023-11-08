@@ -24,6 +24,18 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6739 \
+    fstab.mt6739_ramdisk \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6739.rc \
+    init.mt6739.usb.rc \
+    init.project.rc \
+    ueventd.mt6739.rc
+
 # Soong namespace
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)

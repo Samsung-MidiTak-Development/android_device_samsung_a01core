@@ -1,0 +1,30 @@
+# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6739/fstab.in.mt6739"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 350 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6739/fstab.in.mt6739" 2
+# 117 "vendor/mediatek/proprietary/hardware/fstab/mt6739/fstab.in.mt6739"
+
+system /system ext4 ro wait,logical,first_stage_mount
+vendor /vendor ext4 ro wait,logical,first_stage_mount
+product /product ext4 ro wait,logical,first_stage_mount
+odm /odm ext4 ro wait,logical,first_stage_mount
+
+/dev/block/platform/bootdevice/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678 wait,check,encryptable=footer,quota
+
+/dev/block/platform/bootdevice/by-name/protect1	/mnt/vendor/protect_f	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect2	/mnt/vendor/protect_s	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvdata	/mnt/vendor/nvdata	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvcfg	/mnt/vendor/nvcfg	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/efs	/mnt/vendor/efs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered	wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvram /nvram emmc defaults defaults
+
+/dev/block/platform/bootdevice/by-name/recovery /recovery emmc defaults
+/dev/block/platform/bootdevice/by-name/boot /boot emmc defaults
+
+/devices/BOOTDEV* auto vfat defaults voldmanaged=sdcard0:auto
+/devices/platform/externdevice* auto auto defaults voldmanaged=sdcard:auto
+/devices/platform/mt_usb* auto vfat defaults voldmanaged=usb:auto
