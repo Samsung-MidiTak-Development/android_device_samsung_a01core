@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6739 \
     fstab.mt6739_ramdisk \
     init.ago.rc \
-    init.connectivity.rc \
     init.modem.rc \
     init.mt6739.rc \
     init.mt6739.usb.rc \
